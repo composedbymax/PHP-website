@@ -1,0 +1,128 @@
+/* Page Layout */
+.page-content {
+    position: relative;
+    z-index: 2000;  /* Higher than 1000 to ensure it sits above the nav */
+}
+
+.page-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    padding-top: 60px;
+}
+
+/* Article Header */
+.article-header {
+    margin-bottom: 2rem;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    color: #00f3ff;
+    margin-bottom: 1rem;
+}
+
+.article-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #c6c5c5;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.article-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Difficulty Badges */
+.difficulty-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.difficulty-beginner {
+    background-color: #e7f5e7;
+    color: #2c662d;
+}
+
+.difficulty-intermediate {
+    background-color: #fff3e0;
+    color: #b35c00;
+}
+
+.difficulty-advanced {
+    background-color: #fde7e7;
+    color: #cf1322;
+}
+
+/* Article Content */
+.article-content {
+    line-height: 1.7;
+    color: #cacaca;
+}
+
+.article-content h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: #d3d3d3;
+}
+
+.article-content h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+    color: #d3d3d3;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-content code {
+    background: #4e4e4e;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.article-content pre {
+    background: #4e4e4e;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+/* Table of Contents */
+.table-of-contents {
+    background: #474747;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 2rem 0;
+}
+
+.table-of-contents h3 {
+    margin-top: 0;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.table-of-contents li {
+    margin: 0.5rem 0;
+}
+
+.table-of-contents a {
+    color: #c5c5c5;
+    text-decoration: none;
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline;
+}

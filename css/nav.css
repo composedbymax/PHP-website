@@ -1,0 +1,146 @@
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    /* Ensure container doesn't get affected by page content */
+    width: 0;
+    pointer-events: none;
+}
+
+.nav-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-dark);
+    border: 1px solid var(--neon-blue);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    /* Enable pointer events for button */
+    pointer-events: auto;
+    /* Prevent any margin/padding from affecting position */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--neon-blue);
+    transition: 0.3s;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: var(--primary-dark);
+    border-right: none;
+    transition: 0.3s ease-in-out;
+    padding-top: 80px;
+    /* Enable pointer events for nav */
+    pointer-events: auto;
+    /* Ensure consistent positioning */
+    margin: 0;
+    box-sizing: border-box;
+    /* Prevent any overflow issues */
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Ensure it's always rendered on top of page content */
+    z-index: 1000;
+}
+
+.side-nav.active {
+    left: 0;
+    border-right: 1px solid var(--neon-blue);
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Ensure consistent positioning of list */
+    box-sizing: border-box;
+}
+
+.side-nav ul li {
+    padding: 15px 25px;
+    margin: 0;
+    /* Ensure consistent positioning of list items */
+    box-sizing: border-box;
+}
+
+.side-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 0.2s;
+    /* Prevent any inherited margins/padding */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.side-nav ul li a:hover {
+    color: var(--neon-blue);
+}
+
+/* Add these styles to your existing nav.css */
+
+.dropdown-toggle {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    padding-left: 20px !important;
+    margin-top: 10px !important;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 0 !important;
+}
+
+.dropdown-menu li a {
+    font-size: 0.95em;
+}

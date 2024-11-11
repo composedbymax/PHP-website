@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif; /* Apply font to the whole document */
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+#instructions {
+    position: fixed;
+    top: 10px;
+    left: 90px;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
+    /* No need to set font-family here if it's inherited from body */
+}

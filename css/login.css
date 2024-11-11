@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    min-width: 105vh;
+}
+
+.container {
+    background-color: rgba(46, 46, 46, 0.9);
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    max-width: 40%;
+    width: 100%;
+    margin: 0 1rem; /* Adds margin for small screens */
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    margin: 0.5rem 0;
+    border: 2px solid var(--neon-blue);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+}
+
+button {
+    width: 50%;
+    background-color: var(--neon-blue);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: var(--primary-purple);
+}
+
+.contact-container {
+    margin-top: 1.5rem;
+    color: var(--text-primary);
+}
+
+.contact-container a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust padding and margin for smaller screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        margin: 0 0.5rem; /* Further reduces side margins on very small screens */
+    }
+}

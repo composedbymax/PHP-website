@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue-glow);
+}
+
+/* Gallery and Card Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    background: var(--gradient-dark);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-smooth);
+    height: 300px;
+    opacity: 0; /* Start fully dark */
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.card-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--gradient-dark);
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1; /* Dark starting opacity */
+    transition: opacity 2s ease-in-out;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Hover effect to show normal image */
+/* Hover effect to show normal image */
+.card:hover .card-image {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Hide shimmer overlay on hover */
+.card:hover .shimmer-overlay {
+    opacity: 0;
+}
+
+
+/* Shimmer Overlay */
+.shimmer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-dark);
+    pointer-events: none;
+    opacity: 1;
+    z-index: 3;
+    transition: opacity 1s ease-in-out;
+}
+
+.card-image.shimmer {
+    opacity: 0.5; /* Preview opacity during shimmer */
+}
+
+.card-image.shimmer + .shimmer-overlay {
+    animation: shimmerMask 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card Description */
+.card-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(16, 16, 16, 0.9);
+    color: var(--text-primary);
+    transform: translateY(100%);
+    transition: var(--transition-smooth);
+    z-index: 3;
+}
+
+.card:hover .card-description {
+    transform: translateY(0);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--neon-blue);
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+@keyframes shimmerMask {
+    0% { clip-path: polygon(-100% 0, -100% 0, -100% 100%, -100% 100%); opacity: 1; }
+    45% { clip-path: polygon(-100% 0, 0 0, 0 100%, -100% 100%); opacity: 1; }
+    55% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 1; }
+    100% { clip-path: polygon(100% 0, 200% 0, 200% 100%, 100% 100%); opacity: 1; }
+}
