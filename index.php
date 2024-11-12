@@ -20,23 +20,14 @@ session_start();
     
     <header class="hero">
         <div class="hero-content">
-            <!-- Profile Image -->
-
-
-
-
-            
-            <!-- Profile Content -->
             <div class="profile-content">
                 <div class="name-title-wrapper">
                     <h1>Max</h1>
                     <p class="subtitle">Frontend Developer & <br>Creative Animator</p>
-                    <p class="tech-stack">Next.js • PHP • Creative Development</p>
+                    <p class="tech-stack">Next.js • PHP • Javascript • Creative Development</p>
                 </div>
-                
-                <!-- Social Links -->
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/max-warren-b09b69282/" class="social-link" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                             <rect x="2" y="9" width="4" height="12"></rect>
@@ -44,7 +35,7 @@ session_start();
                         </svg>
                         LinkedIn
                     </a>
-                    <a href="https://www.github.com/composedbymax/my-personal-homepage" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/composedbymax/PHP-website" class="social-link" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
@@ -111,6 +102,22 @@ session_start();
                     "info" => "Upload reference file.<br>Upload batch images.<br>Process to color match all images"
                 ],
                 [
+                    "link" => "projects/image-effects",
+                    "img" => "/img/gif/image-effects.gif",
+                    "title" => "IMG EFFECT",
+                    "description" => "image-effects",
+                    "tags" => ["Javascript", "Canvas API"],
+                    "info" => "Upload file<br>Select effects<br>Download"
+                ],
+                [
+                    "link" => "projects/color-picker",
+                    "img" => "/img/gif/color-picker.gif",
+                    "title" => "Color Codes",
+                    "description" => "color-picker",
+                    "tags" => ["Javascript", "Canvas API"],
+                    "info" => "Select color from wheel and note HEX, RGB, and HSL measurements"
+                ],
+                [
                     "link" => "projects/image-symmetry-processor",
                     "img" => "/img/gif/SYM.gif",
                     "title" => "SYM",
@@ -125,9 +132,24 @@ session_start();
                     "description" => "Vector graphics generator",
                     "tags" => ["Javascript", "DOM manipulation", "State Management"],
                     "info" => "Design a SVG using provided shapeable blocks.<br>Generate to code or .svg file"
-                ]
+                ],
+                [
+                    "link" => "projects/simple-EQ",
+                    "img" => "/img/gif/simple-EQ.gif",
+                    "title" => "simple EQ",
+                    "description" => "simple-EQ",
+                    "tags" => ["Javascript", "Audio API"],
+                    "info" => "simple-EQ for frequency zone detection"
+                ],
+                [
+                    "link" => "projects/code-preview",
+                    "img" => "/img/gif/code-preview.gif",
+                    "title" => "code preview",
+                    "description" => "code preview",
+                    "tags" => ["Javascript"],
+                    "info" => "simple online code-preview"
+                ],
             ];
-
             foreach ($projects as $project) {
                 echo '<div class="project-card" data-title="'.strtolower($project["title"]).'">
                         <div class="card-content">
